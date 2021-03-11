@@ -14,8 +14,13 @@ func main() {
 		"Delhi":   10,
 		"Haryana": 20,
 	}
+	//Initializer syntax
+	//Pop scope is limited to if
 	if pop, ok := map1["Haryana"]; ok {
 		fmt.Println(pop)
+	}
+	if pop1, ok := map1["Jhujjar"]; ok {
+		fmt.Println(pop1)
 	}
 
 	if _, ok := map1["Pun"]; ok {
@@ -29,5 +34,14 @@ func main() {
 		fmt.Println("Number equal")
 	} else {
 		fmt.Println("Number greater than 20")
+	}
+
+	no := 30
+	if no < 20 {
+		fmt.Println("Lesst than 20")
+	} else if no > 20 {
+		fmt.Println("Greater thn 20")
+	} else {
+		fmt.Println("Equal to 20")
 	}
 }

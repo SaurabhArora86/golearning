@@ -12,6 +12,12 @@ type Doctor struct {
 	companions []string
 }
 
+//Another one
+type mystruct struct {
+	name string
+	jobs []string
+}
+
 func main() {
 	doc := Doctor{
 		num:       5,
@@ -71,5 +77,16 @@ func main() {
 	kdoc.age = 33
 	fmt.Println(*kdoc)
 	fmt.Println(gdoc)
+
+	mystrval := mystruct{
+		name: "Saurabh",
+		jobs: []string{
+			"Homealone",
+			"Multiple",
+		},
+	}
+
+	fmt.Println(mystrval)
+	fmt.Println(mystrval.jobs)
 
 }

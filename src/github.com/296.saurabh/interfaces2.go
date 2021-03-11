@@ -48,8 +48,10 @@ func main() {
 	c := circle{3}
 	r := rectangle{3, 4}
 	fmt.Println("Measuring shape")
-	measure(c)
 	s := []shape{c, &r}
+	// IMP: since the common thing between circle and rectangle is area, with s as a slice
+	//of type shape, you can only access area using s, since shape interface only defines area
+	measure(c)
 	//For traversing in slice
 	for _, v := range s {
 		fmt.Println("Printing area with range")

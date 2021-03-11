@@ -2,12 +2,13 @@ package main
 
 import "fmt"
 
+//Point is a struct
 type Point struct {
 	x int
 	y int
 }
 
-//Embedded structs
+//Circle as Embedded structs
 type Circle struct {
 	radius float32
 	center *Point

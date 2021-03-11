@@ -4,6 +4,9 @@ import (
 	"fmt"
 )
 
+// Constant can be shadowed
+const myConst int = 32
+
 func main() {
 
 	// Typed constant

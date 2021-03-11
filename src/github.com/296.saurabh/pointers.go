@@ -6,7 +6,7 @@ import (
 
 //Pointer that is not initialized holds the value nil for eg:
 // var a *int, here value of a is nil and a is a pointer to an integer type
-//Unlike Arrays both maps and slices are internally referencing pointer to the original value
+//Unlike Arrays and struct both maps and slices are internally referencing pointer to the original value
 //when you copy data to another map/slice
 type myStruct struct {
 	foo int
@@ -15,7 +15,7 @@ type myStruct struct {
 func main() {
 
 	var a int = 50
-	var b *int = &a    // OR b := &a
+	var b *int = &a    // OR b := &a b is a pointer of type int
 	fmt.Println(a, *b) // * is defrencing operator
 	fmt.Println(&a, b)
 	a = 27 // *b = 27
@@ -33,6 +33,10 @@ func main() {
 	//Below tells ms is holding address of object that has value 42 in it
 	fmt.Println(ms)
 	fmt.Println(*ms)
+
+	fmt.Println("Another way for struct, by default it holds address of struct")
+	ms1 := new(myStruct)
+	fmt.Println(ms1)
 
 	fmt.Println("Another one----")
 	var rr *myStruct
@@ -53,4 +57,12 @@ func main() {
 	pk1 := &myStruct{}
 	fmt.Println(pk1)
 
+	//maps as example
+	fmt.Println("Maps as example")
+	m1 := map[int]int{1: 20, 2: 30}
+	m2 := m1
+	fmt.Println(m1)
+	m1[1] = 40
+	fmt.Println(m1)
+	fmt.Println(m2)
 }

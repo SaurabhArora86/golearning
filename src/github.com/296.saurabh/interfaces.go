@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+// Interfaces dont describe data, they descibe behavior
+
 func main() {
 
 	fmt.Println("Hello Interfaces")

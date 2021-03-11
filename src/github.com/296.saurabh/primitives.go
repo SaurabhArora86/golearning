@@ -9,6 +9,7 @@ func main() {
 	fmt.Printf("%v, %T\n", p, p)
 
 	//NOTE: Default value of variables
+	// Zero value of bool is false
 	var i int
 	var m bool
 	fmt.Printf("%v, %T\n", i, i)
@@ -17,7 +18,7 @@ func main() {
 	a := 20
 	b := 10
 	c := 5
-
+	// Cant change type while operation like below - 5/3 will give 1
 	fmt.Println(a + b)
 	fmt.Println(a % b)
 	fmt.Println(a / b)
@@ -30,6 +31,7 @@ func main() {
 	fmt.Printf("%v, %T\n", g, g)
 
 	//string
+	fmt.Println("---String")
 	s := "Hello String"
 	fmt.Printf("%v, %T\n", s, s)
 	fmt.Printf("%v, %T\n", s[2], s)
